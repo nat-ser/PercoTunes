@@ -1,37 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class='container'>
+  <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-
-<table>
+  <h1>Add your music</h1>
+  <table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Morning music</th>
-      <th>Afternoon music</th>
-      <th>Evening music</th>
-      <th>Rfid</th>
-      <th colspan="3"></th>
+      <th scope="col"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Morning music</th>
+      <th scope="col">Afternoon music</th>
+      <th scope="col">Evening music</th>
+      <th scope="col">RFID</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.morning_music %></td>
-        <td><%= user.afternoon_music %></td>
-        <td><%= user.evening_music %></td>
-        <td><%= user.rfid %></td>
-        <td><%= link_to 'Show', user_display_path(user) %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope="row"></th>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.name %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.email %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.morning_music %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.afternoon_music %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.evening_music %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= user.rfid %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= link_to 'Show', user_display_path(user) %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New User', new_user_path %>
+  <%= link_to 'New User', new_user_path %>
+</div>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  email: MyString
+  morning: MyString
+  afternoon: MyString
+  evening: MyString
+  rfed: 1
+  name: MyString
+
+two:
+  id: 1
+  email: MyString
+  morning: MyString
+  afternoon: MyString
+  evening: MyString
+  rfed: 1
+  name: MyString

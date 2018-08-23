@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:display, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   def show
     user = User.find_by(rfid: params[:id])
     render :json => user
+  end
+
+  def display
+    render template: "users/user_display"
   end
 
   # GET /users/new
@@ -30,8 +34,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        format.html { redirect_to user_display_path(@user), notice: 'User was successfully created.' }
+        format.json { render :display, status: :created, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -44,8 +48,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+        format.html { redirect_to user_display_path(@user), notice: 'User was successfully updated.' }
+        format.json { render :display, status: :ok, location: @user }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }

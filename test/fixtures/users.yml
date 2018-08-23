@@ -1,19 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
-  email: MyString
-  morning: MyString
-  afternoon: MyString
-  evening: MyString
-  rfed: 1
   name: MyString
+  email: MyString
+  morning_music: MyString
+  afternoon_music: MyString
+  evening_music: MyString
+  rfid: 1
 
 two:
-  id: 1
-  email: MyString
-  morning: MyString
-  afternoon: MyString
-  evening: MyString
-  rfed: 1
   name: MyString
+  email: MyString
+  morning_music: MyString
+  afternoon_music: MyString
+  evening_music: MyString
+  rfid: 1

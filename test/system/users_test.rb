@@ -14,13 +14,12 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New User"
 
-    fill_in "Afternoon", with: @user.afternoon
+    fill_in "Afternoon Music", with: @user.afternoon_music
     fill_in "Email", with: @user.email
-    fill_in "Evening", with: @user.evening
-    fill_in "Id", with: @user.id
-    fill_in "Morning", with: @user.morning
+    fill_in "Evening Music", with: @user.evening_music
+    fill_in "Morning Music", with: @user.morning_music
     fill_in "Name", with: @user.name
-    fill_in "Rfed", with: @user.rfed
+    fill_in "Rfid", with: @user.rfid
     click_on "Create User"
 
     assert_text "User was successfully created"
@@ -31,13 +30,12 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "Afternoon", with: @user.afternoon
+    fill_in "Afternoon Music", with: @user.afternoon_music
     fill_in "Email", with: @user.email
-    fill_in "Evening", with: @user.evening
-    fill_in "Id", with: @user.id
-    fill_in "Morning", with: @user.morning
+    fill_in "Evening Music", with: @user.evening_music
+    fill_in "Morning Music", with: @user.morning_music
     fill_in "Name", with: @user.name
-    fill_in "Rfed", with: @user.rfed
+    fill_in "Rfid", with: @user.rfid
     click_on "Update User"
 
     assert_text "User was successfully updated"

@@ -1,12 +1,12 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
-      t.string :email
-      t.string :morning
-      t.string :afternoon
-      t.string :evening
-      t.integer :rfed
       t.string :name
+      t.string :email
+      t.string :morning_music
+      t.string :afternoon_music
+      t.string :evening_music
+      t.integer :rfid
 
       t.timestamps
     end

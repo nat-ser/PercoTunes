@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @user.id %>
+  <strong>Name:</strong>
+  <%= @user.name %>
 </p>
 
 <p>
@@ -11,28 +11,23 @@
 </p>
 
 <p>
-  <strong>Morning:</strong>
-  <%= @user.morning %>
+  <strong>Morning music:</strong>
+  <%= @user.morning_music %>
 </p>
 
 <p>
-  <strong>Afternoon:</strong>
-  <%= @user.afternoon %>
+  <strong>Afternoon music:</strong>
+  <%= @user.afternoon_music %>
 </p>
 
 <p>
-  <strong>Evening:</strong>
-  <%= @user.evening %>
+  <strong>Evening music:</strong>
+  <%= @user.evening_music %>
 </p>
 
 <p>
-  <strong>Rfed:</strong>
-  <%= @user.rfed %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Rfid:</strong>
+  <%= @user.rfid %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
